@@ -44,6 +44,9 @@ The scatter plot above looks like a bunch of them are moving upwards to the righ
 
 ### Numerical results
 
+```{r}
+cor(SIMS~ARM,data=data)
+```
 
 The numerical results staes that 
 

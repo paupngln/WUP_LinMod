@@ -142,9 +142,12 @@ Up above is the results of the scatter plot and the best FIT line for our SIMS a
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+We have a positive corrleation between both ARM and GRIP data. The number is higher than the correlation of just ARM and SIMS or GRIP and SIMS. 
 
-`
-  
+
 ### Inferential  (Build 2-dimentional model.3)
 
 #### predict model.3 at target point

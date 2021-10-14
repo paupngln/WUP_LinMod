@@ -48,14 +48,39 @@ The scatter plot above looks like a bunch of them are moving upwards to the righ
 cor(SIMS~ARM,data=data)
 ```
 
-The numerical results staes that 
+The correlation we found is 0.69, which is a positive correlation. 
 
 ### Inferential  (Build model.1)
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
+The equation of a line is y = mx + b  
+The fit equation is SIMS = 0.054563*ARM -4.095160  
 
 #### Predict at target point
 
+SIMS = 0.054563*88 -4.095160  
+
+```{r}
+SIMS=0.054563*88-4.095160  
+```
+
+When we plugged in 88 for the arm we got 0.706384. This is my prediction on the value.
+
+```{r}
+new  <- data.frame(ARM = 88,GRIP = 94)
+```
+```{r}
+predict(model.1,new)
+```
+
+Using the predict function gives us as the same result
+0.706403
 
 #### scatterplot with model fit
+
   
 
 ## Model 2 SIM~GRIP

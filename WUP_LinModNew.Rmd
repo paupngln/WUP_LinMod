@@ -64,7 +64,7 @@ The fit equation is SIMS = 0.054563*ARM -4.095160
 SIMS = 0.054563*88 -4.095160  
 
 ```{r}
-SIMS=0.054563*88-4.095160  
+0.054563*88-4.095160  
 ```
 
 When we plugged in 88 for the arm we got 0.706384. This is my prediction on the value.
@@ -120,9 +120,24 @@ If we look at the R-Squared value of this GRIP data, its smaller that the ARMS d
 
 #### predict model.2 at target point
 
-#### now add the model fit to our plot for model.2
-  
+```{r}
+predict(model.2,new)
+```
+```{r}
+0.045463*94-4.809675
+```
 
+
+
+#### now add the model fit to our plot for model.2
+
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
+basicNN + geom_point()
+basicNN + geom_point() + geom_smooth(method=lm)
+```
+
+Up above is the results of the scatter plot and the best FIT line for our SIMS and GRIP data. If we use our prediction value mathes x=94 for GRIP. 
 
 ## Model 3 SIM~ARM+GRIP
 

@@ -35,8 +35,17 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ### scatterplot
 
+```{r}
+plot(SIMS~ARM,data=data)
+```
+
+
+The scatter plot above looks like a bunch of them are moving upwards to the right. My suspicion is a postie correlation since its going uphill to the right. 
+
 ### Numerical results
 
+
+The numerical results staes that 
 
 ### Inferential  (Build model.1)
 

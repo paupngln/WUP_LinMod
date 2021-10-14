@@ -81,7 +81,14 @@ Using the predict function gives us as the same result
 
 #### scatterplot with model fit
 
-  
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+basicNN + geom_point()
+basicNN + geom_point() + geom_smooth(method=lm)
+```
+
+
+Here is the best fit line for the data, and we can clearly see that if we look for an x value of 88 for the arm and the value of y is 0.7 as predicted. 
 
 ## Model 2 SIM~GRIP
 

@@ -1,7 +1,7 @@
 ---
 title: "linear model from Web"
-author: "Your Name"
-date: "Put semester and year"
+author: "Paulo Poblete"
+date: "Fall 2021"
 output:
    html_document:
          toc: true

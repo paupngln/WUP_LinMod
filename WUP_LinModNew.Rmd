@@ -106,9 +106,17 @@ The scatterplot shows that its a positive correlation since its going upwards to
 cor(SIMS~GRIP,data=data)
 ```
 
+GRIP has a smaller correlation than with SIMS with GRIP VS SIMS with ARM  
+  
 
 ### Inferential  (Build model.2)
-  
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
+
+If we look at the R-Squared value of this GRIP data, its smaller that the ARMS data adjusted R-Squared. Furthermore, the residual standard error is larger for the GRIP Data rather than the ARM data. Both of them indicate that Model 1 is doing a way better job at explaining our prediction, and a better model.  
+
 
 #### predict model.2 at target point
 

@@ -94,8 +94,17 @@ Here is the best fit line for the data, and we can clearly see that if we look f
 
 ### Now add in scatterplot
 
+```{r}
+plot(SIMS~GRIP,data=data)
+```
+
+The scatterplot shows that its a positive correlation since its going upwards to the right. 
 
 ### Numerical results 
+
+```{r}
+cor(SIMS~GRIP,data=data)
+```
 
 
 ### Inferential  (Build model.2)

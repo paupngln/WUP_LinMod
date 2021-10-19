@@ -73,7 +73,7 @@ When we plugged in 88 for the arm we got 0.706384. This is my prediction on the 
 new  <- data.frame(ARM = 88,GRIP = 94)
 ```
 ```{r}
-predict(model.1,new)
+predict(model.1,new,interval = "prediction")
 ```
 
 Using the predict function gives us as the same result
@@ -121,7 +121,7 @@ If we look at the R-Squared value of this GRIP data, its smaller that the ARMS d
 #### predict model.2 at target point
 
 ```{r}
-predict(model.2,new)
+predict(model.2,new,interval = "predict")
 ```
 ```{r}
 0.045463*94-4.809675

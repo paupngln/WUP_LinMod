@@ -133,11 +133,12 @@ predict(model.2,new,interval = "predict")
 
 ```{r}
 basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
-basicNN + geom_point()
 basicNN + geom_point() + geom_smooth(method=lm)
 ```
 
 Up above is the results of the scatter plot and the best FIT line for our SIMS and GRIP data. If we use our prediction value mathes x=94 for GRIP. 
+
+
 
 ## Model 3 SIM~ARM+GRIP
 
@@ -150,8 +151,21 @@ We have a positive corrleation between both ARM and GRIP data. The number is hig
 
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 <- lm(SIMS~GRIP + ARM,data=data)
+summary.lm(model.3)
+```
+
+SIMS = -5.43 + GRIP * 0.02 + ARM * 0.04  
+Our residual standard error is 1.144  which is smaller than our other models, and our multiple R - Sq  is bigger, which makes it a better fit model. 
+
+
 #### predict model.3 at target point
-  
+```{r}
+predict(model.3,new,interval = "predict")
+```
+
+
 
 ## Comparing nested models ANOVA Test
 
